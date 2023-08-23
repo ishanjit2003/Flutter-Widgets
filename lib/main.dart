@@ -25,8 +25,27 @@ class _MyAppState extends State<MyApp> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  
 
+                  Expanded(
+                    child: ListView.builder(
+                      itemCount: 5,
+                      itemBuilder:(context,index){
+                        return  ListTile(
+                          leading:
+                          CircleAvatar(
+                            backgroundColor: Colors.black,
+
+                            backgroundImage: NetworkImage(
+                                "https://images.pexels.com/photos/18024337/pexels-photo-18024337/free-photo-of-a-man-with-fire-in-blue-hour.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
+                          ),
+                          title: Text("Ishanjit"),
+                          subtitle: Text("chammak challo"),
+                          trailing: Text("3:50pm"),
+                        );
+                          //Text("item"+index.toString());
+                      },
+                    ),
+                  )
                 ])),
       ),
     );
@@ -116,7 +135,6 @@ class _MyAppState extends State<MyApp> {
 // ),
 // )
 
-
 //RICH TEXT
 
 // RichText(
@@ -127,4 +145,70 @@ class _MyAppState extends State<MyApp> {
 // TextSpan(text: "world",style: TextStyle(fontSize: 50,color: Colors.red))
 // ]
 // )
+// )
+
+
+//TEXT FORM FIELD WIDGET
+
+// Padding(
+// padding: const EdgeInsets.all(8.0),
+// child: TextFormField(
+// keyboardType: TextInputType.emailAddress,
+// style:
+// const TextStyle(fontSize: 20, color: Colors.green),
+// cursorColor: Colors.deepOrange,
+// //enabled: true,
+//
+// decoration: InputDecoration(
+// prefixIcon: Icon(Icons.email,color: Colors.green,),
+// suffixIcon:Icon(Icons.panorama_fish_eye,color: Colors.red,) ,
+// filled: true,
+// fillColor: Colors.grey.withOpacity(0.3),
+// hintText: "Email",
+// //labelText: "Email",
+// hintStyle:
+// TextStyle(color: Colors.red, fontSize: 12),
+//
+// enabledBorder: OutlineInputBorder(
+// borderSide: BorderSide(color: Colors.black),
+// borderRadius: BorderRadius.circular(10)
+// ),
+//
+// focusedBorder: OutlineInputBorder(
+// borderSide: BorderSide(color: Colors.green),
+// borderRadius: BorderRadius.circular(10)
+// ),
+//
+// errorBorder: OutlineInputBorder(
+// borderSide: BorderSide(color: Colors.red),
+// borderRadius: BorderRadius.circular(10)
+// )
+// ),
+// onChanged:(value){
+// print(value);
+// },
+// ),
+// )
+
+//LIST VIEW TILE AND BUILDER
+
+// Expanded(
+// child: ListView.builder(
+// itemCount: 5,
+// itemBuilder:(context,index){
+// return  ListTile(
+// leading:
+// CircleAvatar(
+// backgroundColor: Colors.black,
+//
+// backgroundImage: NetworkImage(
+// "https://images.pexels.com/photos/18024337/pexels-photo-18024337/free-photo-of-a-man-with-fire-in-blue-hour.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"),
+// ),
+// title: Text("Ishanjit"),
+// subtitle: Text("chammak challo"),
+// trailing: Text("3:50pm"),
+// );
+// //Text("item"+index.toString());
+// },
+// ),
 // )
